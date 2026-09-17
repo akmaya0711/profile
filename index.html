@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>맹영재 | MAENG YOUNGJAE - Executive Profile</title>
+  <title>맹영재 | MAENG YOUNGJAE - Profile</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,8 +13,8 @@
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, sans-serif;
-      background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0a0f1d 100%);
-      color: #f1f5f9;
+      background-color: #f1f5f9;
+      color: #1e293b;
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -25,18 +25,14 @@
       max-width: 720px;
       width: 100%;
     }
-
-    /* 상단 프로필 히어로 영역 */
     .profile-hero {
-      background: rgba(30, 41, 59, 0.65);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 28px;
       padding: 40px 24px 32px;
       text-align: center;
-      margin-bottom: 24px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
     }
     .avatar-wrap {
       width: 130px;
@@ -44,29 +40,29 @@
       margin: 0 auto 20px;
       border-radius: 50%;
       padding: 4px;
-      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
-      box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.2);
     }
     .avatar-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      background-color: #1e293b;
+      background-color: #f8fafc;
       display: block;
     }
     .hero-name-ko {
       font-size: 28px;
-      font-weight: 700;
-      color: #ffffff;
+      font-weight: 800;
+      color: #0f172a;
       letter-spacing: -0.5px;
       margin-bottom: 4px;
     }
     .hero-name-en {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 2px;
-      color: #38bdf8;
+      color: #0284c7;
       text-transform: uppercase;
       margin-bottom: 14px;
     }
@@ -75,50 +71,48 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
     .pill {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
       padding: 5px 14px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #cbd5e1;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #334155;
     }
     .hero-family {
       font-size: 13px;
-      color: #94a3b8;
+      color: #64748b;
+      font-weight: 500;
     }
-
-    /* 핵심 지표 하이라이트 바 */
     .metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .metric-card {
-      background: rgba(30, 41, 59, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 18px;
       padding: 16px 8px;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
     }
     .metric-value {
       font-size: 20px;
       font-weight: 800;
-      color: #38bdf8;
+      color: #0284c7;
       margin-bottom: 4px;
       letter-spacing: -0.5px;
     }
     .metric-label {
       font-size: 11px;
-      color: #94a3b8;
-      font-weight: 500;
+      color: #64748b;
+      font-weight: 600;
     }
-
-    /* 벤토 그리드 섹션 */
     .bento-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -133,19 +127,12 @@
         grid-column: span 2;
       }
     }
-
     .bento-card {
-      background: rgba(30, 41, 59, 0.6);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
       border-radius: 22px;
       padding: 22px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
-    }
-    .bento-card:hover {
-      border-color: rgba(56, 189, 248, 0.3);
-      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
     }
     .card-header {
       display: flex;
@@ -154,44 +141,42 @@
       margin-bottom: 14px;
     }
     .card-icon {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 10px;
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
+      background: #e0f2fe;
+      color: #0284c7;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 17px;
     }
     .card-title {
       font-size: 16px;
-      font-weight: 700;
-      color: #ffffff;
+      font-weight: 800;
+      color: #0f172a;
     }
     .card-sub {
-      font-size: 13px;
-      color: #38bdf8;
-      font-weight: 600;
+      font-size: 14px;
+      color: #0369a1;
+      font-weight: 700;
       margin-bottom: 8px;
     }
     .card-desc {
-      font-size: 13px;
-      color: #cbd5e1;
+      font-size: 14px;
+      color: #334155;
       line-height: 1.6;
     }
     .item-group {
       margin-bottom: 14px;
       padding-bottom: 12px;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+      border-bottom: 1px dashed #cbd5e1;
     }
     .item-group:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: none;
     }
-
-    /* 태그 클라우드 (취미/관심사) */
     .hobby-tags {
       display: flex;
       flex-wrap: wrap;
@@ -199,15 +184,14 @@
       margin-top: 4px;
     }
     .hobby-tag {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
       padding: 6px 12px;
       border-radius: 12px;
-      font-size: 12px;
-      color: #e2e8f0;
+      font-size: 13px;
+      color: #334155;
+      font-weight: 600;
     }
-
-    /* 하단 이동 버튼 */
     .nav-bar {
       text-align: center;
       padding-top: 8px;
@@ -216,14 +200,14 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      background-color: #0f172a;
       color: #ffffff;
       text-decoration: none;
       padding: 14px 28px;
       border-radius: 14px;
       font-size: 14px;
-      font-weight: 600;
-      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
       transition: all 0.2s ease;
     }
     .btn-back-card:active {
@@ -240,7 +224,6 @@
 
   <div class="container">
 
-    <!-- 1. 상단 프로필 히어로 -->
     <div class="profile-hero">
       <div class="avatar-wrap">
         <img class="avatar-img" src="profile.jpg" alt="맹영재">
@@ -255,7 +238,6 @@
       <div class="hero-family">家長 · 1男 1女의 아버지, 남편이자 아들</div>
     </div>
 
-    <!-- 2. 핵심 지표 하이라이트 -->
     <div class="metrics-grid">
       <div class="metric-card">
         <div class="metric-value">30+</div>
@@ -275,10 +257,8 @@
       </div>
     </div>
 
-    <!-- 3. 모듈형 벤토 그리드 본문 -->
     <div class="bento-grid">
 
-      <!-- 자본시장 & 리서치 (와이드 카드) -->
       <div class="bento-card col-span-2">
         <div class="card-header">
           <div class="card-icon">📈</div>
@@ -292,7 +272,6 @@
         </div>
       </div>
 
-      <!-- 미디어 & 언론 기고 -->
       <div class="bento-card">
         <div class="card-header">
           <div class="card-icon">🎙️</div>
@@ -304,7 +283,6 @@
         </div>
       </div>
 
-      <!-- 번역 및 출판 -->
       <div class="bento-card">
         <div class="card-header">
           <div class="card-icon">📚</div>
@@ -316,7 +294,6 @@
         </div>
       </div>
 
-      <!-- 학문 및 연구 (와이드 카드) -->
       <div class="bento-card col-span-2">
         <div class="card-header">
           <div class="card-icon">🎓</div>
@@ -332,7 +309,6 @@
         </div>
       </div>
 
-      <!-- 취미 & 라이프스타일 (와이드 카드) -->
       <div class="bento-card col-span-2">
         <div class="card-header">
           <div class="card-icon">🌱</div>
@@ -350,7 +326,6 @@
 
     </div>
 
-    <!-- 4. 디지털 명함 페이지 복귀 버튼 -->
     <div class="nav-bar">
       <a class="btn-back-card" href="https://akmaya0711.github.io/business-card/">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
