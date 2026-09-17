@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | 맹영재 (MAENG YOUNGJAE)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, sans-serif;
+      background-color: #0f172a;
+      color: #334155;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+      line-height: 1.6;
+    }
+    .wrapper {
+      max-width: 680px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
+    /* 상단 프로필 헤더 */
+    .hero-header {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 24px 32px;
+      position: relative;
+    }
+    .profile-img-wrap {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      overflow: hidden;
+      background-color: #334155;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+    .hero-subtitle {
+      font-size: 14px;
+      color: #94a3b8;
+      letter-spacing: 0.5px;
+    }
+    .hero-family {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 14px;
+      border-radius: 20px;
+      color: #cbd5e1;
+    }
+
+    /* 본문 섹션 */
+    .content-area {
+      padding: 32px 24px;
+    }
+    .section-block {
+      margin-bottom: 28px;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    .card-item {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 10px;
+    }
+    .item-header {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .item-sub {
+      font-size: 13px;
+      color: #0284c7;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .item-desc {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.5;
+    }
+    .tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .tag {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    /* 하단 버튼 */
+    .footer-nav {
+      border-top: 1px solid #e2e8f0;
+      padding-top: 20px;
+      text-align: center;
+    }
+    .btn-card-link {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #0f172a;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .btn-card-link:hover {
+      background-color: #1e293b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <!-- 상단 프로필 -->
+    <div class="hero-header">
+      <div class="profile-img-wrap">
+        <img class="profile-img" src="profile.jpg" alt="맹영재">
+      </div>
+      <h1 class="hero-name">맹 영 재</h1>
+      <p class="hero-subtitle">Stock Market Analyst · Translator · Educator</p>
+      <div class="hero-family">家長 · 1男 1女의 아버지, 남편이자 아들</div>
+    </div>
+
+    <!-- 본문 내용 -->
+    <div class="content-area">
+
+      <!-- 1. 금융 & 주식 분석 -->
+      <div class="section-block">
+        <div class="section-title">📊 Stock Market Analyst</div>
+        <div class="card-item">
+          <div class="item-header">신영증권 · 삼성증권 ('92~)</div>
+          <div class="item-sub">Analyst & Strategist</div>
+          <div class="item-desc">
+            주식운용 (AUM 8,000억원)<br>
+            미국주식 전문가 · 은퇴설계 전문가 (ARPS)<br>
+            지속가능경영 프로젝트 수행 · 환경부 「녹색금융 포럼」 자문위원
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. 방송 및 언론 기고 -->
+      <div class="section-block">
+        <div class="section-title">🎙️ Media & Columnist</div>
+        <div class="card-item">
+          <div class="item-header">방송 출연 & 신문 기고</div>
+          <div class="item-desc">
+            MBC, KBS, SBS, MBN, YTN 등 주요 방송 증권전문가 다수 출연<br>
+            동아일보 &lt;맹영재의 월가 리포트&gt; 칼럼 연재
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 번역 및 출판 -->
+      <div class="section-block">
+        <div class="section-title">📚 Translator</div>
+        <div class="card-item">
+          <div class="item-header">바른번역 소속</div>
+          <div class="item-desc">
+            Harvard Business Review (HBR) 한국판 공식 번역 참여
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. 학문 및 자격 -->
+      <div class="section-block">
+        <div class="section-title">🎓 Academic Background</div>
+        <div class="card-item">
+          <div class="item-header">경영학 석사 (Finance)</div>
+          <div class="item-desc">연세대학교 경영학과 졸업 및 동 대학원 석사 (재무관리 전공)</div>
+        </div>
+        <div class="card-item">
+          <div class="item-header">한국어 교육학</div>
+          <div class="item-desc">
+            세종대학교 교육대학원 석사 과정 (한국어 교육 전공)<br>
+            한국어 교원 자격증 (2급)
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. 취미 & 일상 -->
+      <div class="section-block">
+        <div class="section-title">🌱 Skills & Hobbies</div>
+        <div class="card-item">
+          <div class="tag-container">
+            <span class="tag">텃밭 가꾸기</span>
+            <span class="tag">캠핑 & 여행</span>
+            <span class="tag">제과제빵</span>
+            <span class="tag">자전거</span>
+            <span class="tag">Guitar & 합창</span>
+            <span class="tag">영화 · 전시회 · 음악회 감상</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 디지털 명함 연동 버튼 -->
+      <div class="footer-nav">
+        <a class="btn-card-link" href="https://akmaya0711.github.io/business-card/">
+          📇 디지털 명함 페이지 보기
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
