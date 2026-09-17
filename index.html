@@ -3,255 +3,361 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | 맹영재 (MAENG YOUNGJAE)</title>
+  <title>맹영재 | MAENG YOUNGJAE - Executive Profile</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", Roboto, sans-serif;
-      background-color: #0f172a;
-      color: #334155;
+      background: radial-gradient(circle at 50% 0%, #1e293b 0%, #0a0f1d 100%);
+      color: #f1f5f9;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      padding: 40px 16px;
+      padding: 48px 16px;
       line-height: 1.6;
     }
-    .wrapper {
-      max-width: 680px;
+    .container {
+      max-width: 720px;
       width: 100%;
-      background: #ffffff;
+    }
+
+    /* 상단 프로필 히어로 영역 */
+    .profile-hero {
+      background: rgba(30, 41, 59, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-    }
-    /* 상단 프로필 헤더 */
-    .hero-header {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      color: #ffffff;
-      text-align: center;
       padding: 40px 24px 32px;
-      position: relative;
+      text-align: center;
+      margin-bottom: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
-    .profile-img-wrap {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 16px;
+    .avatar-wrap {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 20px;
       border-radius: 50%;
-      border: 4px solid rgba(255, 255, 255, 0.2);
-      overflow: hidden;
-      background-color: #334155;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      padding: 4px;
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
     }
-    .profile-img {
+    .avatar-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 50%;
+      background-color: #1e293b;
+      display: block;
     }
-    .hero-name {
-      font-size: 26px;
+    .hero-name-ko {
+      font-size: 28px;
       font-weight: 700;
+      color: #ffffff;
       letter-spacing: -0.5px;
-      margin-bottom: 2px;
-    }
-    .hero-en-name {
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      color: #38bdf8;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .hero-subtitle {
-      font-size: 14px;
-      color: #94a3b8;
-      letter-spacing: 0.5px;
-    }
-    .hero-family {
-      display: inline-block;
-      margin-top: 14px;
-      font-size: 12px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 4px 14px;
-      border-radius: 20px;
-      color: #cbd5e1;
-    }
-
-    /* 본문 섹션 */
-    .content-area {
-      padding: 32px 24px;
-    }
-    .section-block {
-      margin-bottom: 28px;
-    }
-    .section-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: #0f172a;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 8px;
-      margin-bottom: 14px;
-    }
-    .card-item {
-      background-color: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 16px;
-      margin-bottom: 10px;
-    }
-    .item-header {
-      font-size: 15px;
-      font-weight: 700;
-      color: #1e293b;
       margin-bottom: 4px;
     }
-    .item-sub {
-      font-size: 13px;
-      color: #0284c7;
+    .hero-name-en {
+      font-size: 14px;
       font-weight: 600;
-      margin-bottom: 6px;
+      letter-spacing: 2px;
+      color: #38bdf8;
+      text-transform: uppercase;
+      margin-bottom: 14px;
     }
-    .item-desc {
-      font-size: 13px;
-      color: #475569;
-      line-height: 1.5;
-    }
-    .tag-container {
+    .hero-pills {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 8px;
-      margin-top: 6px;
+      margin-bottom: 18px;
     }
-    .tag {
-      background-color: #ffffff;
-      border: 1px solid #cbd5e1;
-      padding: 4px 10px;
-      border-radius: 20px;
+    .pill {
       font-size: 12px;
-      color: #475569;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+    }
+    .hero-family {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    /* 핵심 지표 하이라이트 바 */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .metric-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 16px 8px;
+      text-align: center;
+    }
+    .metric-value {
+      font-size: 20px;
+      font-weight: 800;
+      color: #38bdf8;
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+    }
+    .metric-label {
+      font-size: 11px;
+      color: #94a3b8;
       font-weight: 500;
     }
 
-    /* 하단 버튼 */
-    .footer-nav {
-      border-top: 1px solid #e2e8f0;
-      padding-top: 20px;
-      text-align: center;
+    /* 벤토 그리드 섹션 */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
     }
-    .btn-card-link {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #0f172a;
+    @media (min-width: 640px) {
+      .bento-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .col-span-2 {
+        grid-column: span 2;
+      }
+    }
+
+    .bento-card {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 22px;
+      padding: 22px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .bento-card:hover {
+      border-color: rgba(56, 189, 248, 0.3);
+      transform: translateY(-2px);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .card-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: rgba(56, 189, 248, 0.15);
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .card-sub {
+      font-size: 13px;
+      color: #38bdf8;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+    .item-group {
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+    .item-group:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    /* 태그 클라우드 (취미/관심사) */
+    .hobby-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .hobby-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      color: #e2e8f0;
+    }
+
+    /* 하단 이동 버튼 */
+    .nav-bar {
+      text-align: center;
+      padding-top: 8px;
+    }
+    .btn-back-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
       color: #ffffff;
       text-decoration: none;
-      border-radius: 12px;
+      padding: 14px 28px;
+      border-radius: 14px;
       font-size: 14px;
       font-weight: 600;
-      transition: background 0.2s ease;
+      box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+      transition: all 0.2s ease;
     }
-    .btn-card-link:hover {
-      background-color: #1e293b;
+    .btn-back-card:active {
+      transform: scale(0.98);
+    }
+    .btn-back-card svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
     }
   </style>
 </head>
 <body>
 
-  <div class="wrapper">
-    <!-- 상단 프로필 -->
-    <div class="hero-header">
-      <div class="profile-img-wrap">
-        <img class="profile-img" src="profile.jpg" alt="맹영재">
+  <div class="container">
+
+    <!-- 1. 상단 프로필 히어로 -->
+    <div class="profile-hero">
+      <div class="avatar-wrap">
+        <img class="avatar-img" src="profile.jpg" alt="맹영재">
       </div>
-      <h1 class="hero-name">맹 영 재</h1>
-      <div class="hero-en-name">MAENG YOUNGJAE</div>
-      <p class="hero-subtitle">Stock Market Analyst · Translator · Educator</p>
-      <div class="hero-family"> 1男 1女의 아버지, 남편이자 아들</div>
+      <h1 class="hero-name-ko">맹 영 재</h1>
+      <div class="hero-name-en">MAENG YOUNGJAE</div>
+      <div class="hero-pills">
+        <span class="pill">Stock Market Analyst</span>
+        <span class="pill">HBR Translator</span>
+        <span class="pill">Korean Educator</span>
+      </div>
+      <div class="hero-family">家長 · 1男 1女의 아버지, 남편이자 아들</div>
     </div>
 
-    <!-- 본문 내용 -->
-    <div class="content-area">
+    <!-- 2. 핵심 지표 하이라이트 -->
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-value">30+</div>
+        <div class="metric-label">Market Exp.</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">8,000억</div>
+        <div class="metric-label">AUM 운용</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">HBR</div>
+        <div class="metric-label">공식 번역</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-value">2급</div>
+        <div class="metric-label">한국어교원</div>
+      </div>
+    </div>
 
-      <!-- 1. 금융 & 주식 분석 -->
-      <div class="section-block">
-        <div class="section-title">📊 Stock Market Analyst</div>
-        <div class="card-item">
-          <div class="item-header">신영증권 · 삼성증권 ('92~)</div>
-          <div class="item-sub">Analyst & Strategist</div>
-          <div class="item-desc">
-            주식운용 (AUM 8,000억원)<br>
-            미국주식 전문가 · 은퇴설계 전문가 (ARPS)<br>
-            지속가능경영 프로젝트 수행 · 환경부 「녹색금융 포럼」 자문위원
-          </div>
+    <!-- 3. 모듈형 벤토 그리드 본문 -->
+    <div class="bento-grid">
+
+      <!-- 자본시장 & 리서치 (와이드 카드) -->
+      <div class="bento-card col-span-2">
+        <div class="card-header">
+          <div class="card-icon">📈</div>
+          <div class="card-title">Stock Market Analyst & Strategist</div>
+        </div>
+        <div class="card-sub">신영증권 · 삼성증권 ('92~)</div>
+        <div class="card-desc">
+          주식운용 (AUM 8,000억원 총괄) · 리서치 및 시장 전략 수립<br>
+          미국주식 전문가 · 은퇴설계 전문가 (ARPS)<br>
+          지속가능경영 프로젝트 수행 · 환경부 「녹색금융 포럼」 자문위원
         </div>
       </div>
 
-      <!-- 2. 방송 및 언론 기고 -->
-      <div class="section-block">
-        <div class="section-title">🎙️ Media & Columnist</div>
-        <div class="card-item">
-          <div class="item-header">방송 출연 & 신문 기고</div>
-          <div class="item-desc">
-            MBC, KBS, SBS, MBN, YTN 등 주요 방송 증권전문가 다수 출연<br>
-            동아일보 &lt;맹영재의 월가 리포트&gt; 칼럼 연재
-          </div>
+      <!-- 미디어 & 언론 기고 -->
+      <div class="bento-card">
+        <div class="card-header">
+          <div class="card-icon">🎙️</div>
+          <div class="card-title">Media & Columnist</div>
+        </div>
+        <div class="card-desc">
+          MBC, KBS, SBS, MBN, YTN 등 주요 방송 증권전문가 다수 출연<br><br>
+          동아일보 &lt;맹영재의 월가 리포트&gt; 칼럼 기고
         </div>
       </div>
 
-      <!-- 3. 번역 및 출판 -->
-      <div class="section-block">
-        <div class="section-title">📚 Translator</div>
-        <div class="card-item">
-          <div class="item-header">바른번역 소속</div>
-          <div class="item-desc">
-            Harvard Business Review (HBR) 한국판 공식 번역 참여
-          </div>
+      <!-- 번역 및 출판 -->
+      <div class="bento-card">
+        <div class="card-header">
+          <div class="card-icon">📚</div>
+          <div class="card-title">Translator</div>
+        </div>
+        <div class="card-sub">바른번역 소속</div>
+        <div class="card-desc">
+          Harvard Business Review (HBR) 한국판 공식 번역 참여
         </div>
       </div>
 
-      <!-- 4. 학문 및 자격 -->
-      <div class="section-block">
-        <div class="section-title">🎓 Academic Background</div>
-        <div class="card-item">
-          <div class="item-header">경영학 석사 (Finance)</div>
-          <div class="item-desc">연세대학교 경영학과 졸업 및 동 대학원 석사 (재무관리 전공)</div>
+      <!-- 학문 및 연구 (와이드 카드) -->
+      <div class="bento-card col-span-2">
+        <div class="card-header">
+          <div class="card-icon">🎓</div>
+          <div class="card-title">Academic Background & Education</div>
         </div>
-        <div class="card-item">
-          <div class="item-header">한국어 교육학</div>
-          <div class="item-desc">
-            세종대학교 교육대학원 석사 과정 (한국어 교육 전공)<br>
-            한국어 교원 자격증 (2급)
-          </div>
+        <div class="item-group">
+          <div class="card-sub">경영학 석사 (Finance)</div>
+          <div class="card-desc">연세대학교 경영학과 졸업 및 동 대학원 석사 (재무관리 전공)</div>
         </div>
-      </div>
-
-      <!-- 5. 취미 & 일상 -->
-      <div class="section-block">
-        <div class="section-title">🌱 Skills & Hobbies</div>
-        <div class="card-item">
-          <div class="tag-container">
-            <span class="tag">텃밭 가꾸기</span>
-            <span class="tag">캠핑 & 여행</span>
-            <span class="tag">제과제빵</span>
-            <span class="tag">자전거</span>
-            <span class="tag">Guitar & 합창</span>
-            <span class="tag">영화 · 전시회 · 음악회 감상</span>
-          </div>
+        <div class="item-group">
+          <div class="card-sub">한국어 교육학</div>
+          <div class="card-desc">세종대학교 교육대학원 석사 과정 (한국어 교육 전공) · 한국어 교원 자격증 (2급)</div>
         </div>
       </div>
 
-      <!-- 디지털 명함 연동 버튼 -->
-      <div class="footer-nav">
-        <a class="btn-card-link" href="https://akmaya0711.github.io/business-card/">
-          📇 디지털 명함 페이지 보기
-        </a>
+      <!-- 취미 & 라이프스타일 (와이드 카드) -->
+      <div class="bento-card col-span-2">
+        <div class="card-header">
+          <div class="card-icon">🌱</div>
+          <div class="card-title">Skills & Hobbies</div>
+        </div>
+        <div class="hobby-tags">
+          <span class="hobby-tag">텃밭 가꾸기</span>
+          <span class="hobby-tag">캠핑 & 여행</span>
+          <span class="hobby-tag">제과제빵</span>
+          <span class="hobby-tag">자전거 라이딩</span>
+          <span class="hobby-tag">Guitar & 합창</span>
+          <span class="hobby-tag">영화 · 전시회 · 음악회 감상</span>
+        </div>
       </div>
 
     </div>
+
+    <!-- 4. 디지털 명함 페이지 복귀 버튼 -->
+    <div class="nav-bar">
+      <a class="btn-back-card" href="https://akmaya0711.github.io/business-card/">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+        디지털 명함(Business Card) 보기
+      </a>
+    </div>
+
   </div>
 
 </body>
